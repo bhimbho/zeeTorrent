@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { listTorrents } from "../api";
 import type { TorrentItem } from "../types";
 
-const POLL_MS = 2000;
+const POLL_MS = 1000;
 
 export function useTorrents() {
   const [torrents, setTorrents] = useState<TorrentItem[]>([]);

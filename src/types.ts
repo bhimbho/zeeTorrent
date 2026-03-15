@@ -10,13 +10,27 @@ export interface TorrentStats {
   state: string;
   progress_bytes: number;
   total_bytes: number;
+  uploaded_bytes?: number;
   finished?: boolean;
   live?: LiveStats | null;
 }
 
 export interface LiveStats {
-  download_speed?: number | { bytes_per_sec?: number };
-  upload_speed?: number | { bytes_per_sec?: number };
+  download_speed?: { mbps: number; human_readable: string };
+  upload_speed?: { mbps: number; human_readable: string };
+  time_remaining?: { human_readable: string } | null;
+  snapshot?: {
+    peer_stats?: PeerStats;
+  };
+}
+
+export interface PeerStats {
+  queued: number;
+  connecting: number;
+  live: number;
+  seen: number;
+  dead: number;
+  not_needed: number;
 }
 
 export interface AddTorrentResult {
