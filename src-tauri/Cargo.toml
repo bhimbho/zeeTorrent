@@ -1,0 +1,26 @@
+[package]
+name = "wtorrent"
+version = "0.1.0"
+description = "Torrent downloader for Mac"
+edition = "2021"
+
+[lib]
+name = "wtorrent_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+librqbit = "8"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "fs"] }
+dirs = "5"
+anyhow = "1"
+base64 = "0.22"
+bytes = "1"
+

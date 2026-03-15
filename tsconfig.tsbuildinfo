@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/events.ts","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/addtorrentform.tsx","./src/components/downloadlocation.tsx","./src/components/torrentlist.tsx","./src/components/torrentrow.tsx","./src/hooks/usetorrents.ts"],"version":"5.9.3"}
