@@ -1,7 +1,7 @@
 use std::path::PathBuf;
 
 fn config_path() -> Option<PathBuf> {
-    dirs::config_dir().map(|d| d.join("wtorrent").join("download_dir.txt"))
+    dirs::config_dir().map(|d| d.join("zeetorrent").join("download_dir.txt"))
 }
 
 pub fn load_download_dir() -> PathBuf {
@@ -35,5 +35,5 @@ pub fn save_download_dir(path: &str) -> std::io::Result<()> {
 fn default_download_dir() -> PathBuf {
     dirs::download_dir()
         .unwrap_or_else(|| PathBuf::from("."))
-        .join("wtorrent")
+        .join("zeetorrent")
 }

@@ -19,7 +19,7 @@ export default function TorrentList() {
   if (torrents.length === 0 && !loading) {
     return (
       <p style={{ color: "var(--text-muted)", fontSize: 14 }}>
-        No torrents. Upload a .torrent file or open a magnet link with wtorrent.
+        No torrents. Upload a .torrent file or open a magnet link with zeetorrent.
       </p>
     );
   }
