@@ -23,7 +23,7 @@ function formatBytes(n: number): string {
   return `${n.toFixed(i === 0 ? 0 : 1)} ${u[i]}`;
 }
 
-function getPreviewFromResult(result: AddTorrentResult & Record<string, unknown>): {
+function getPreviewFromResult(result: AddTorrentResult): {
   infoHash: string;
   name: string;
   totalBytes: number;

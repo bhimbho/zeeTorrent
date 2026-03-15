@@ -27,6 +27,8 @@ impl TorrentService {
     ) -> AddTorrentOptions {
         let mut opts = AddTorrentOptions::default();
         opts.paused = paused;
+        opts.overwrite = true;
+        opts.defer_writes = Some(true);
         if let Some(p) = output_folder {
             opts.output_folder = Some(p.to_string());
         }
